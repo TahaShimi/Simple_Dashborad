@@ -1,0 +1,75 @@
+dx-drawer {
+    background-color: rgba(191, 191, 191, 0.15);
+}
+
+
+#view{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.sidebar_top {
+    margin-top: 5px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+::ng-deep .dx-list{
+    margin-top: 10px !important;
+}
+
+::ng-deep .dx-list-item {
+    border-top: none !important;
+}
+::ng-deep .dx-list-item div{
+    padding: 0;
+}
+
+::ng-deep .dx-list-item a div{
+    color: #1a3854;
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+}
+
+::ng-deep .dx-list-item a{
+    text-decoration: none !important;
+    height: 100%;
+    padding: 15px 17px !important;
+    display: flex;
+}
+
+::ng-deep .dx-list-item a span{
+    padding-left: 20px;
+    font-size: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+::ng-deep .dx-list-item .dx-icon {
+    color: #1a3854 !important;
+    font-size: 2.2rem;
+}
+
+
+::ng-deep .dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item.dx-list-item-selected {
+    background-color: none !important;
+}
+
+
+::ng-deep .dx-template-wrapper{
+    margin-left: -5px;
+    width: 100%;
+}
+
+dx-button{
+    position: absolute;
+    z-index: 1;
+    left: -10px;
+    width: 33px;
+    top: 24px;
+    background-color: rgba(191, 191, 191, 0.15);
+}

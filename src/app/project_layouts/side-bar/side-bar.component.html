@@ -1,0 +1,27 @@
+<dx-drawer template="template" [(opened)]="isDrawerOpen" [minSize]="60" [(revealMode)]="revealMode"
+  (openedStateMode)="openMode">
+  <dx-button [(icon)]="icon" location="before" (onClick)="openDrawer()">
+  </dx-button>
+  <div *dxTemplate="let data of 'template'">
+    <div class="sidebar_top">
+      <img src="../../../assets/images/favicon.png" alt="" width="35" style="padding-left: 13px;" *ngIf="!isDrawerOpen">
+      <img src="../../../assets/images/BSG_logo_RGB.svg" alt="" width="200" *ngIf="isDrawerOpen">
+    </div>
+    <dx-list [items]="menu" [width]="300" selectionMode="single" itemTemplate="links" (click)="itemClick()">
+      <div *dxTemplate="let link of 'links'">
+        <a [routerLink]="['/' + link.path]">
+          <div>
+            <div class="dx-list-item-icon-container">
+              <i class="dx-icon dx-list-item-icon dx-icon-{{link.icon}}"></i>
+            </div>
+            <span>{{ link.text }}</span>
+          </div>
+        </a>
+      </div>
+    </dx-list>
+  </div>
+  <div id="view">
+    <app-top-bar></app-top-bar>
+    <router-outlet></router-outlet>
+  </div>
+</dx-drawer>
